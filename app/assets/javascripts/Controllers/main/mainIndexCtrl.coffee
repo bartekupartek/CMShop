@@ -1,3 +1,7 @@
-@IndexCtrl = ($scope) ->
+@IndexCtrl = ($scope, $location) ->
+
   $scope.data =
-    posts: [{title: 'My cat', description: 'Lorem ipsum'}, {title: 'Blablabla', description: 'Lorem ipsum'}]
+    widgets: [{name: 'Ostatni Magwet'}, {name: 'TOP 10'}]
+
+  $scope.viewWidget = (widgetId) ->
+    $location.url('/widget/'+widgetId)
